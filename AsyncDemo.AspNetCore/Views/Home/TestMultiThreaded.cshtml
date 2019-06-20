@@ -1,0 +1,15 @@
+﻿@model AsyncDemo.AspNetCore.ViewModels.AsyncViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Multi-Threaded Work</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        @foreach (var m in Model.Bag.OrderBy(x => x.Date))
+        {
+            <div>@m.Event - @m.Date</div>
+        }
+    </div>
+</div>

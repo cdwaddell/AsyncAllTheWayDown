@@ -1,0 +1,51 @@
+﻿@model AsyncDemo.AspNetCore.ViewModels.ThreadsViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>This is a demo of Async/Await in .Net Core.</p>
+</div>
+
+
+<form>
+    <h3>Worker Threads</h3>
+    <div class="form-group row">
+        @Html.LabelFor(x => x.MinThreads, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(x => x.MinThreads, new { @readonly = "readonly", @class = "form-control-plaintext" })
+        </div>
+    </div>
+    <div class="form-group row">
+        @Html.LabelFor(x => x.AvailableThreads, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(x => x.AvailableThreads, new { @readonly = "readonly", @class = "form-control-plaintext" })
+        </div>
+    </div>
+    <div class="form-group row">
+        @Html.LabelFor(x => x.MaxWorkerThreads, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(x => x.MaxWorkerThreads, new { @readonly = "readonly", @class = "form-control-plaintext" })
+        </div>
+    </div>
+    <h3>Completion Threads</h3>
+    <div class="form-group row">
+        @Html.LabelFor(x => x.MinCompletionPortThreads, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(x => x.MinCompletionPortThreads, new { @readonly = "readonly", @class = "form-control-plaintext" })
+        </div>
+    </div>
+    <div class="form-group row">
+        @Html.LabelFor(x => x.CompletionPortThreads, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(x => x.CompletionPortThreads, new { @readonly = "readonly", @class = "form-control-plaintext" })
+        </div>
+    </div>
+    <div class="form-group row">
+        @Html.LabelFor(x => x.MaxCompletionPortThreads, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(x => x.MaxCompletionPortThreads, new { @readonly = "readonly", @class = "form-control-plaintext" })
+        </div>
+    </div>
+</form>

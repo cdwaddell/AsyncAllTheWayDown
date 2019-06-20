@@ -1,0 +1,15 @@
+﻿@model System.Collections.Generic.List<string>
+@{
+    ViewBag.Title = "GetTimeZones";
+}
+
+<h2>Deadlock Demo</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        @foreach (var m in Model)
+        {
+            <div>@(m??"WTF, where did it go?")</div>
+        }
+    </div>
+</div>
